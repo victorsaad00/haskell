@@ -1,0 +1,16 @@
+-- 17:
+geraSequencia :: Int -> [Int]
+geraSequencia 0 = []
+geraSequencia x = [x] ++ [-x] ++ geraSequencia (x-1)
+
+--18:
+inverte :: [a] -> [a]
+inverte [] = []
+inverte (h:t) = inverte t ++ [h]
+
+--20:
+intercala :: [Int] -> [Int] -> [Int]
+intercala [] [] = []
+intercala [] x = x
+intercala x [] = x
+intercala (h1:t1) (h2:t2) = [h1] ++ [h2] ++ intercala t1 t2
